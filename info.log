@@ -1,0 +1,31 @@
+{"message":"EventsService.getAllevents is not a function","level":"error"}
+{"message":"EventsService.getAllEvents is not a function","level":"error"}
+{"message":"Unexpected string in JSON at position 195","level":"error"}
+{"message":"EventsService.getAllEvents is not a function","level":"error"}
+{"message":"res.status(...).address is not a function","level":"error"}
+{"message":"res.status(...).address is not a function","level":"error"}
+{"message":"EventsService.insertEvent is not a function","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'event' of undefined","level":"error"}
+{"message":"Cannot read property 'event' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"serializeEvent is not defined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"UsersService.updateEvent is not a function","level":"error"}
+{"message":"eventId is not defined","level":"error"}
+{"message":"update \"events\" set \"fullname\" = $1 where \"id\" = $2 - column \"fullname\" of relation \"events\" does not exist","level":"error"}
