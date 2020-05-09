@@ -29,3 +29,5 @@
 {"message":"UsersService.updateEvent is not a function","level":"error"}
 {"message":"eventId is not defined","level":"error"}
 {"message":"update \"events\" set \"fullname\" = $1 where \"id\" = $2 - column \"fullname\" of relation \"events\" does not exist","level":"error"}
+{"message":"app is not defined","level":"error"}
+{"message":"app is not defined","level":"error"}
