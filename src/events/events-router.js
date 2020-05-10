@@ -36,8 +36,8 @@ eventsRouter
       description,
       address,
       type,
-      time_of_event,
-    } = req.body;
+      time_of_event
+    } = req.body
     const newEvent = {
       parent_name,
       title,
@@ -46,16 +46,15 @@ eventsRouter
       type,
       time_of_event
     };
-    console.log(newEvent);
+    //console.log(newEvent);
     //each value in new event is required, verify that they were sent
     for (const [key, value] of Object.entries(newEvent)) {
       if (value == null) {
         return res.status(400).json({
-          error: { message: `Missing '${key}' in request body'` },
-        });
+          error: { message: `Missing '${key}' in request body` }
+        })
       }
     }
-    // res.json("POST")
 
     EventsService.insertEvent(knexInstance, newEvent)
       .then((event) => {
