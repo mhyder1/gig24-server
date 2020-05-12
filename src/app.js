@@ -24,7 +24,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/attend', attendRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello, world!");
+  res.send("Hello, Heroku!");
 });
 
 
