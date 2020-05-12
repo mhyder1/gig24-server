@@ -1,21 +1,21 @@
-const EventsService = {
-    getAllEvents(knex){
+const AttendService = {
+    getAllAttendees(knex){
         return knex
          .select('*')
-         .from('events');
+         .from('attend');
     },
-    insertEvent(knex, newEvent){
+    insertAttend(knex, newAttend){
         return knex
-         .insert(newEvent)
-         .into('events')
+         .insert(newAttend)
+         .into('attend')
          .returning('*')
          .then(rows => { return rows[0] });
     },
-    getEventById(knex, eventId){
+    getAttendById(knex, attendId){
         return knex
          .select('*')
-         .from('events')
-         .where('id', eventId)
+         .from('attend')
+         .where('id', attendId)
          .first(); //get event itself
     },
     deleteEvent(knex, eventId){
@@ -24,7 +24,6 @@ const EventsService = {
          .delete();
     },
     updateEvent(knex, eventId, updatedEvent){
-        console.log(eventId,updatedEvent)
         return knex('events')
          .where('id', eventId)
          .update(updatedEvent)
@@ -32,5 +31,5 @@ const EventsService = {
          .then(rows => { return rows[0] });
     }
   };
-  
-  module.exports = EventsService;
+
+  module.exports = AttendService; 

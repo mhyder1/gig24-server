@@ -31,3 +31,42 @@
 {"message":"update \"events\" set \"fullname\" = $1 where \"id\" = $2 - column \"fullname\" of relation \"events\" does not exist","level":"error"}
 {"message":"app is not defined","level":"error"}
 {"message":"app is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}

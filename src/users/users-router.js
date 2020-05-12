@@ -38,7 +38,6 @@ usersRouter
         });
       }
     }
-    // res.json("POST")
 
     UsersService.insertUser(knexInstance, newUser)
       .then((user) => {
