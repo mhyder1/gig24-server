@@ -18,18 +18,12 @@ const AttendService = {
          .where('id', attendId)
          .first(); //get event itself
     },
-    deleteEvent(knex, eventId){
-        return knex('events')
-         .where('id', eventId)
+    deleteAttend(knex, attendId){
+        return knex('attend')
+         .where('id', attendId)
          .delete();
     },
-    updateEvent(knex, eventId, updatedEvent){
-        return knex('events')
-         .where('id', eventId)
-         .update(updatedEvent)
-         .returning('*')
-         .then(rows => { return rows[0] });
-    }
+  
   };
 
   module.exports = AttendService; 

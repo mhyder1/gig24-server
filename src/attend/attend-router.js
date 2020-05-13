@@ -68,58 +68,36 @@ attendRouter
   });
 
 //get, update, or delete specific event
-// attendRouter
-//   .route("/:id")
-//   // .all(requireAuth)
-//   .all((req, res, next) => {
-//     const knexInstance = req.app.get("db");
-//     const attendId = req.params.id;
+attendRouter
+  .route("/:id")
+  // .all(requireAuth)
+  .all((req, res, next) => {
+    const knexInstance = req.app.get("db");
+    const attendId = req.params.id;
 
-//     AttendService.getAttendById(knexInstance, attendId)
-//       .then((attend) => {
-//         if (!attend) {
-//           return res.status(404).json({
-//             error: { message: `Event doesn't exist` },
-//           });
-//         }
-//         res.attend = attend
-//         next();
-//       })
-//       .catch(next);
-//   })
-//   .get((req, res, next) => {
-//     res.json(res.attend);
-//   })
-//   .delete((req, res, next) => {
-//     const knexInstance = req.app.get("db");
-//     const deleteEventId = req.params.id;
+    AttendService.getAttendById(knexInstance, attendId)
+      .then((attend) => {
+        if (!attend) {
+          return res.status(404).json({
+            error: { message: `Event doesn't exist` },
+          });
+        }
+        res.attend = attend
+        next();
+      })
+      .catch(next);
+  })
+  .get((req, res, next) => {
+    res.json(res.attend);
+  })
+  .delete((req, res, next) => {
+    const knexInstance = req.app.get("db");
+    const deleteEventId = req.params.id;
 
-//     AttendService.deleteEvent(knexInstance, deleteEventId)
-//       .then(() => res.status(204).end())
-//       .catch(next);
-//   })
+    AttendService.deleteAttend(knexInstance, deleteEventId)
+      .then(() => res.status(204).end())
+      .catch(next);
+  })
 
-//   .patch(jsonParser, (req, res, next) => {
-//     const knexInstance = req.app.get('db');
-//     const updateEventId = req.params.id;
-//     const { title, description, address, type, time_of_event } = req.body;
-//     const updatedEvent = { title, description, address, type, time_of_event };
-//     // console.log(updatedEvent)
-//     //check that at least one field is getting updated in order to patch
-//     const numberOfValues = Object.values(updatedEvent).filter(Boolean).length
-//     if(numberOfValues === 0){
-//         return res.status(400).json({
-//             error: { message: `Request body must contain either  title, description, address, time_of_event'`}
-//         });
-//     }
-
-//     // updatedEvent.time_of_event = new Date();
-//     // console.log(updateEventId, updatedEvent)
-//     AttendService.updateEvent(knexInstance, updateEventId, updatedEvent)
-//      .then((event) => {
-//       return res.json(event);
-//      })
-//      .catch(next);
-//   });
 
 module.exports = attendRouter;
