@@ -1,28 +1,49 @@
-# Express Boilerplate!
+# PARENT CONNECT App
 
-This is a boilerplate project used for starting new projects!
+The Parent Connect app connects single parents to a collective online village where families  can grow together experiencing different activities, cultures and most importantly supporting each other. User has to signup in order to utilize the full functionality of join and create variety of events.  
 
-## Set up
+Contains functions to enable CRUD operations for client side application. Deployed with Heroku
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+* * *
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
-7. Install npm express morgan cors helmet
-8. Install npm i mocha chai supertest nodemon -D
+## LINK TO LIVE APP
 
-## Scripts
+https://parent-connect-app.now.sh/
 
-Start the application `npm start`
+***
 
-Start nodemon for the application `npm run dev`
+## TECHNOLOGIES USED
 
-Run the tests `npm test`
+* Node
+* Express Framework
+* Bcrypt
+* Jwt Security
+* Chai
+* Mocha
+* Knex
 
-## Deploying
+***
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+## SCREENSHOT
+
+### 1. Landing Page
+
+![logo](https://github.com/Anarchalk/parent-connect-client/blob/master/screenshots/landing-pg.JPG "Landing Page")
+
+### 2.Signup Page
+
+![logo](https://raw.githubusercontent.com/Anarchalk/parent-connect-client/master/screenshots/signup-pg.JPG "Signup page")
+
+### 3.Event Host View
+
+![logo](https://raw.githubusercontent.com/Anarchalk/parent-connect-client/master/screenshots/event-pg.JPG "Event host view")
+
+### 4. My Event Page
+
+![logo](https://github.com/Anarchalk/parent-connect-client/blob/master/screenshots/my-events.JPG "My event page")
+
+***
+
+## DOCUMENTATION
+You can find detailed development documentation from the link below:
+https://gist.github.com/Anarchalk/bcb7069ed9589d20de41f2ef65cbbfd0
