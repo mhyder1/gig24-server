@@ -18,15 +18,14 @@ const serializeEvent = (event) => ({
   author: event.author
 });
 
-//get all events and add new event
+
 attendRouter
   .route("/")
   .get((req, res, next) => {
     const knexInstance = req.app.get("db");
     AttendService.getAllAttendees(knexInstance)
       .then((attendees) => {
-        // res.json(events.map(serializeEvent));
-        res.json(attendees);
+         res.json(attendees);
       })
       .catch(next);
   })
@@ -46,8 +45,6 @@ attendRouter
     };
 
 
-
-    // console.log(newEvent);
     //each value in new event is required, verify that they were sent
     for (const [key, value] of Object.entries(newEvent)) {
       if (value == null) {
@@ -67,10 +64,9 @@ attendRouter
       .catch(next);
   });
 
-//get, update, or delete specific event
+
 attendRouter
   .route("/:id")
-  // .all(requireAuth)
   .all((req, res, next) => {
     const knexInstance = req.app.get("db");
     const attendId = req.params.id;

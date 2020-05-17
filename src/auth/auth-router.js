@@ -12,7 +12,7 @@ authRouter
   console.log(password);
 
   const loginUser = { username, password };
-  // console.log(loginUser)
+
   for (const [key, value] of Object.entries(loginUser))
     if (value == null)
       return res.status(400).json({
@@ -28,13 +28,6 @@ authRouter
           error: 'Incorrect username or password',
         })
 
-      // return AuthService.comparePasswords(loginUser.password, dbUser.password)
-      //   .then(compareMatch => {
-      //     if (!compareMatch)
-      //       return res.status(400).json({
-      //         error: 'Incorrect username or password',
-      //       })
-      //console.log(dbUser, loginUser);
       if (loginUser.password === dbUser.password) {
         const sub = dbUser.username;
         const payload = { user_id: dbUser.id, fullname: dbUser.fullname };
@@ -48,8 +41,6 @@ authRouter
           error: "Incorrect username or password",
         });
       }
-
-      // })
     })
     .catch(next);
 });

@@ -18,7 +18,7 @@ const serializeEvent = (event) => ({
   author: event.author
 });
 
-//get all events and add new event
+
 eventsRouter
   .route("/")
   .get((req, res, next) => {
@@ -48,7 +48,7 @@ eventsRouter
       type,
       time_of_event,author
     };
-    //console.log(newEvent);
+  
     //each value in new event is required, verify that they were sent
     for (const [key, value] of Object.entries(newEvent)) {
       if (value == null) {

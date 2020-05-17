@@ -23,7 +23,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/attend', attendRouter);
 
-//changed greeting
+
 app.get("/", (req, res) => {
   res.send("Hello, Heroku!");
 });

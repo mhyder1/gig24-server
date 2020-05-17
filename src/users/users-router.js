@@ -13,7 +13,7 @@ const serializeUser = (user) => ({
   password: user.password
 });
 
-//get all events and add new event
+
 usersRouter
   .route("/")
   .get((req, res, next) => {
@@ -30,7 +30,7 @@ usersRouter
 
     const newUser = {fullname, username, password };
     console.log(newUser);
-    //each value in new user is required, verify that they were sent
+
     for (const [key, value] of Object.entries(newUser)) {
       if (value == null) {
         return res.status(400).json({
