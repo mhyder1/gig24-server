@@ -24,6 +24,91 @@ https://parent-connect-app.now.sh/
 
 ***
 
+## FUNCTIONALITY
+
+The app uses GET requests to pull the events from the database. 
+The app uses POST requests get sent to the database for:
+  - Adding users 
+  - Creating a new event 
+  - Logging a user in 
+  - Creating a new user
+  - Joining event
+The app uses DELETE requests when user unjoin from the event. 
+The app uses PATCH requests when updating details of the event.
+
+***
+
+Users
+Allows users to create accounts
+
+  fullname: { type: String, required: true },
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  
+  
+Events
+Allows users to create event with title, description, date and time, address and type of event.
+
+  title: { type: String, required: true },
+  description: { type: String, required: true, unique: true },
+  address: { type: String, required: true },
+  type: { type: String, required: true },
+  time_of_event: { type: String, required: true }
+ 
+***
+
+## API Overview
+
+Events
+GET
+
+@route   GET api/events/
+@desc    Gets all events 
+@access  Public
+
+route.get('/', EventsService.getAllEvent);
+
+GET 
+
+@route   GET api/events/:id/
+@desc    Gets event by id
+@access  Private
+
+route.get('/:id', EventsService.getEventById);
+
+PATCH
+
+@route   PATCH api/events/:id/
+@desc    Allows users to update event details
+@access  Private
+
+router.patch('/:id, EventsService.updateEvent')
+
+Attend
+DELETE
+
+@route   Delete api/attend/
+@desc    Allows users to unjoin from event
+@access  Private
+
+route.get('/:id', AttendService.deleteAttend);
+POST
+
+@route   POST api/attend/
+@desc    Allows users to join events
+@access  Private
+
+route.get
+
+Users
+POST
+
+@route   GET /api/users/signup
+@desc    Allows users to create account
+@access  Public
+
+
+
 ## SCREENSHOT
 
 ### 1. Landing Page
