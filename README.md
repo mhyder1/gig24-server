@@ -38,16 +38,16 @@ The app uses PATCH requests when updating details of the event.
 
 ***
 
-*Users
-*Allows users to create accounts
+USERS
+Allows users to create accounts
 
   fullname: { type: String, required: true },
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   
   
-*Events
-*Allows users to create event with title, description, date and time, address and type of event.
+EVENTS
+Allows users to create event with title, description, date and time, address and type of event.
 
   title: { type: String, required: true },
   description: { type: String, required: true, unique: true },
