@@ -61,13 +61,13 @@ Allows users to create event with title, description, date and time, address and
 
 Events
 GET
-
+<blockquote>
 @route   GET api/events/
 @desc    Gets all events 
 @access  Public
 
 route.get('/', EventsService.getAllEvent);
-
+</blockquote>
 GET 
 
 @route   GET api/events/:id/
