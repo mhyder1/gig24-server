@@ -5,7 +5,6 @@ const { makeEventsArray } = require("./events.fixtures");
 
 describe("Events Endpoints", function () {
   let db;
-  //console.log(process.env.TEST_DB_URL)
   before("make knex instance", () => {
     db = knex({
       client: "pg",

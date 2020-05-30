@@ -78,3 +78,5 @@
 {"message":"AttendService.deleteEvent is not a function","level":"error"}
 {"message":"Cannot read property 'password' of undefined","level":"error"}
 {"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"database \"gig34\" does not exist","level":"error"}
+{"message":"database \"gig34\" does not exist","level":"error"}
