@@ -80,3 +80,9 @@
 {"message":"Cannot read property 'password' of undefined","level":"error"}
 {"message":"database \"gig34\" does not exist","level":"error"}
 {"message":"database \"gig34\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = 1\n            AND users.id = 1\n            returning * - syntax error at or near \"returning\"","level":"error"}
+{"message":"knex.raw(...).returning is not a function","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = users.id\n            AND jobs.user_id = undefined\n             - column \"undefined\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = users.id\n            AND jobs.user_id = undefined\n             - column \"undefined\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.user_id = 4\n            AND applied.user_id = user.id\n            AND applied.job_id = jobs.id\n             - syntax error at or near \".\"","level":"error"}

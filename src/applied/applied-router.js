@@ -59,6 +59,45 @@ appliedRouter
       .catch(next);
   });
 
+// User can get a list of jobs they have applied to
+appliedRouter
+  .route("/user/:user_id")
+  .get((req, res, next) => {
+    const knexInstance = req.app.get("db");
+    const user_id = req.params.user_id;
+    AppliedService.jobsAppliedToByUser(knexInstance, user_id)
+      .then((jobs) => {
+        if (!jobs) {
+          return res.status(404).json({
+            error: { message: `No jobs found` },
+          });
+        }
+        // console.log(jobs)
+        res.json(jobs.rows)
+        next()
+      })
+      .catch(next)
+  }) 
+
+//employer can get current applicants based on their user id
+appliedRouter
+.route("/current/:emp_id")
+.get((req, res, next) => {
+  const knexInstance = req.app.get("db");
+  const emp_id = req.params.emp_id;
+  AppliedService.getCurrentApplicants(knexInstance, emp_id)
+    .then((applicants) => {
+      if (!applicants) {
+        return res.status(404).json({
+          error: { message: `No applicants found` },
+        });
+      }
+      console.log(applicants)
+      res.json(applicants.rows)
+      next()
+    })
+    .catch(next)
+})
 
 appliedRouter
   .route("/:id")
