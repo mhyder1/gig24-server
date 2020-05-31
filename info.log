@@ -78,3 +78,11 @@
 {"message":"AttendService.deleteEvent is not a function","level":"error"}
 {"message":"Cannot read property 'password' of undefined","level":"error"}
 {"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"database \"gig24\" does not exist","level":"error"}
+{"message":"database \"gig24\" does not exist","level":"error"}
+{"message":"database \"gig24\" does not exist","level":"error"}
+{"message":"select * from \"applied\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"current\"","level":"error"}
+{"message":"select * from \"jobs\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"byuser\"","level":"error"}
+{"message":"select * from \"applied\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"current\"","level":"error"}
+{"message":"select * from \"jobs\" where \"id\" = $1 limit $2 - invalid input syntax for type integer: \"byuser\"","level":"error"}
+{"message":"Unexpected token } in JSON at position 219","level":"error"}

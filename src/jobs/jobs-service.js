@@ -30,6 +30,12 @@ const JobsService = {
          .update(updatedJob)
          .returning('*')
          .then(rows => { return rows[0] });
+    },
+    getJobsByUser(knex, empId) {
+        return knex
+        .select('*')
+        .from('jobs')
+        .where('user_id', empId)
     }
   };
   

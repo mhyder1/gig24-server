@@ -70,6 +70,25 @@ jobsRouter
       .catch(next);
   });
 
+  //get jobs by user route
+  jobsRouter
+  .route("/byuser/:id")
+  .get((req, res, next) => {
+    const knexInstance = req.app.get("db");
+    const empId = req.params.id;
+
+    JobsService.getJobsByUser(knexInstance, empId)
+      .then((jobs) => {
+        if (!jobs) {
+          return res.status(404).json({
+            error: { message: `Jobs doesn't exist` },
+          });
+        }
+        res.json(jobs) 
+      })
+      .catch(error=>console.log(error));
+  })
+
 //get, update, or delete specific job
 jobsRouter
   .route("/:id")
