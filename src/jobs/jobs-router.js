@@ -114,7 +114,7 @@ jobsRouter
   .delete((req, res, next) => {
     const knexInstance = req.app.get("db");
     const deleteJobId = req.params.id;
-    console.log(deleteJobId)
+    //console.log(deleteJobId)
     JobsService.deleteJob(knexInstance, deleteJobId)
       .then(() => res.status(204).end())
       .catch(next);
@@ -126,7 +126,7 @@ jobsRouter
     const updateJobId = req.params.id;
     const {  position, pay, description, duration, location, term, user_id } = req.body;
     const updatedJob = {  position, pay, description, duration, location, term, user_id };
- console.log(updatedJob)
+ //console.log(updatedJob)
     //check that at least one field is getting updated in order to patch
     const numberOfValues = Object.values(updatedJob).filter(Boolean).length
     if(numberOfValues === 0){

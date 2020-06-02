@@ -36,9 +36,8 @@ userProfileRouter
     const {
       name,
       about_me,
-      photo,
+      // photo,
       education,
-      duration,
       location,
       imdb,
       skillset,
@@ -47,15 +46,14 @@ userProfileRouter
     const newProfile = {
       name,
       about_me,
-      photo,
+      // photo,
       education,
-      duration,
       location,
       imdb,
       skillset,
       user_id
     };
-  
+  console.log(newProfile)
     //each value in new profile is required, verify that they were sent
     for (const [key, value] of Object.entries(newProfile)) {
       if (value == null) {

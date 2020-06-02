@@ -18,6 +18,14 @@ const EmpProfileService = {
          .where('id', profileId)
          .first(); //get event itself
     },
+
+    getProfileByUser(knex, user_id){
+        return knex
+         .select('*')
+         .from('emp_profile')
+         .where('user_id', user_id)
+         .first(); //get event itself
+    },
     deleteProfile(knex, profileId){
         return knex('emp_profile')
          .where('id', profileId)

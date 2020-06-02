@@ -30,7 +30,7 @@ authRouter
 
       if (loginUser.password === dbUser.password) {
         const sub = dbUser.username;
-        const payload = { user_id: dbUser.id, fullname: dbUser.fullname };
+        const payload = { user_id: dbUser.id, fullname: dbUser.fullname, employer: dbUser.employer};
         console.log(payload);
         res.send({
           authToken: AuthService.createJwt(sub, payload),
