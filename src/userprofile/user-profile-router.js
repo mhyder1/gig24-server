@@ -73,6 +73,24 @@ userProfileRouter
       .catch(next);
   });
 
+  userProfileRouter
+  .route('/user/:id')
+  .get((req, res) => {
+    const knexInstance = req.app.get("db");
+    const user_id = req.params.id;
+    UserProfileService.getProfileByUser(knexInstance, user_id)
+    .then((profile) => {
+      if (!profile) {
+        return res.status(404).json({
+          error: { message: `Profile doesn't exist` },
+        });
+      }
+      res.json(profile)
+  
+    })
+    .catch((error)=> console.log(error));
+  })
+
 //get, update, or delete specific profile
 userProfileRouter
   .route("/:id")

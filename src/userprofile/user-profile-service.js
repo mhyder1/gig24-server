@@ -18,6 +18,13 @@ const UserProfileService = {
          .where('id', profileId)
          .first(); //get event itself
     },
+    getProfileByUser(knex, user_id){
+        return knex
+         .select('*')
+         .from('user_profile')
+         .where('user_id', user_id)
+         .first(); //get event itself
+    },
     deleteProfile(knex, profileId){
         return knex('user_profile')
          .where('id', profileId)
