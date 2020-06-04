@@ -23,11 +23,11 @@ VALUES
   ('Editor','New York', 64, '2 months', 'Independent film', 'full time', 5),
   ('Actor','Chicago', 75, '7 days','Commercial', 'full time', 6);
 
-INSERT INTO user_profile(name, location, about_me, phone, email, education, imdb, skillset, user_id)
+INSERT INTO user_profile(name, location, about_me, education, imdb, skillset, user_id)
 VALUES
-  ('dunder', 'Arizona', 'Im an actor','111-222-3333', 'dunder@mail.com', 'School of film,','imdb stuff','Lots of skills', 1),
-  ('jason', 'Texas', 'Im an editor','555-555-5555', 'dunder@mail.com', 'Arts Academy,','imdb stuff','Many skills', 2),
-  ('jasmine', 'Philadelphia', 'Im a director','987-222-2345', 'dunder@mail.com', 'University of movies,','imdb stuff','Tons of skills', 3);
+  ('dunder', 'Arizona', 'Im an actor', 'School of film,','imdb stuff','Lots of skills', 1),
+  ('jason', 'Texas', 'Im an editor', 'Arts Academy,','imdb stuff','Many skills', 2),
+  ('jasmine', 'Philadelphia', 'Im a director', 'University of movies,','imdb stuff','Tons of skills', 3);
 
 INSERT INTO emp_profile(company_name, phone, location, about_us, email, fax, website, user_id)
 VALUES

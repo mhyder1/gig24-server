@@ -36,7 +36,7 @@ const JobsService = {
         .select('*')
         .from('jobs')
         .where('user_id', empId)
-    },
+    }
     getGigs(knex, user_id) {
         return knex.raw(
         `SELECT DISTINCT on (jobs.id) 

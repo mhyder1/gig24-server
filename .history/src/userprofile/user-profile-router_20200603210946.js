@@ -36,10 +36,8 @@ userProfileRouter
     const {
       name,
       about_me,
-      // photo,
+      photo,
       education,
-      phone,
-      email,
       location,
       imdb,
       skillset,
@@ -48,10 +46,8 @@ userProfileRouter
     const newProfile = {
       name,
       about_me,
-      // photo,
+      photo,
       education,
-      phone,
-      email,
       location,
       imdb,
       skillset,

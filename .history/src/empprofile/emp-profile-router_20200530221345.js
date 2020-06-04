@@ -75,25 +75,6 @@ empProfileRouter
     .catch(next);
 });
 
-empProfileRouter
-.route("/emp/:id")
-.get((req, res) => {
-  const knexInstance = req.app.get("db");
-  const user_id = req.params.id;
-
-  EmpProfileService.getProfileByUser(knexInstance, user_id)
-    .then((profile) => {
-      if (!profile) {
-        return res.status(404).json({
-          error: { message: `Profile doesn't exist` },
-        });
-      }
-      res.json(profile)
-
-    })
-    .catch((error)=> console.log(error));
-})
-
 //get, update, or delete specific profile
 empProfileRouter
 .route("/:id")

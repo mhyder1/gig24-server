@@ -36,18 +36,7 @@ const JobsService = {
         .select('*')
         .from('jobs')
         .where('user_id', empId)
-    },
-    getGigs(knex, user_id) {
-        return knex.raw(
-        `SELECT DISTINCT on (jobs.id) 
-            jobs.*, applied.user_id,
-           CASE WHEN applied.user_id = ${user_id} THEN TRUE  
-                ELSE FALSE END as js_id
-        FROM jobs 
-        JOIN applied on jobs.id = applied.job_id;
-            `
-        )
     }
   };
-
+  
   module.exports = JobsService;
