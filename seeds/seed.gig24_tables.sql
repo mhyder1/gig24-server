@@ -17,16 +17,16 @@ VALUES
   ('chris', 'Christopher Nolan', 'chris', TRUE),
   ('steve', 'Steven Spielberg', 'steve', TRUE);
 
-INSERT INTO jobs (position, location, pay, duration, description, term, user_id)
+INSERT INTO jobs ( position, title, type, requirements, description, membery, location, pay, duration, week, user_id)
 VALUES
-  ('Key grip','California', 50,'6 weeks', 'New movie','freelance',4 ),
-  ('Editor','New York', 64, '2 months', 'Independent film', 'full time', 5),
-  ('Actor','Chicago', 75, '7 days','Commercial', 'full time', 6);
+  ('Key grip', '10 Days Around the States', 'Travel Show','Experienced','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Yes', 'East Coast', 'low-budget', '6','Days',4 ),
+  ('Editor','How To Not Become Like Your Dad', 'Independent film','Good Communication skills',' Quis lectus nulla at volutpat diam. Ornare arcu dui vivamus arcu felis bibendum ut tristique. Molestie at elementum eu facilisis. Sem integer ','No','New York', 'Full-time', 2 ,'week', 5),
+  ('Actor',' Finding Daniel Russo','Documentary','Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget ', 'Purus non enim praesent elementum facilisis leo vel fringilla est. ' , 'Yes', 'Atlanta, GA' ,'part-time', 12, 'months', 6);
 
 INSERT INTO user_profile(name, position, location, about_me, education, imdb, skillset, user_id)
 VALUES
   ('Dunder', 'Actor', 'Pheonix, AZ', 'Im an actor.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'School of film,','imdb stuff','Lots of skills', 1),
-  ('jason', 'Editor', 'Austin,TX', 'Im an editor.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Arts Academy,','imdb stuff','Many skills', 2),
+  ('jason', 'Editor', 'Austin, TX', 'Im an editor.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Arts Academy,','imdb stuff','Many skills', 2),
   ('jasmine', 'Production Assistant', 'Philadelphia, PA', 'Im a PA. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'University of movies,','imdb stuff','Tons of skills', 3);
 
 INSERT INTO emp_profile(company_name, phone, location, about_us, email, fax, website, user_id)
