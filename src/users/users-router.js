@@ -10,7 +10,8 @@ const serializeUser = (user) => ({
   id: user.id,
   fullname: xss(user.fullname),
   username: user.username,
-  password: user.password
+  password: user.password,
+  employer: user.employer
 });
 
 
@@ -26,9 +27,9 @@ usersRouter
   })
   .post(jsonParser, (req, res, next) => {
     const knexInstance = req.app.get("db");
-    const { fullname, username, password } = req.body;
+    const { fullname, username, password, employer } = req.body;
 
-    const newUser = {fullname, username, password };
+    const newUser = {fullname, username, password, employer };
     console.log(newUser);
 
     for (const [key, value] of Object.entries(newUser)) {
@@ -83,8 +84,8 @@ usersRouter
   .patch(jsonParser, (req, res, next) => {
     const knexInstance = req.app.get('db');
     const updateUserId = req.params.id;
-    const { fullname, username, password } = req.body;
-    const updatedUser = { fullname, username, password};
+    const { fullname, username, password,employer } = req.body;
+    const updatedUser = { fullname, username, password, employer};
  console.log(updatedUser)
     //check that at least one field is getting updated in order to patch
     const numberOfValues = Object.values(updatedUser).filter(Boolean).length

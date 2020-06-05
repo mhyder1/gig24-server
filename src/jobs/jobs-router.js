@@ -2,7 +2,7 @@ const express = require("express");
 const xss = require("xss");
 
 const JobsService = require("./jobs-service");
-const { requireAuth } = require('../middleware/jwt-auth')
+const { requireAuth } = require("../middleware/jwt-auth");
 const jobsRouter = express.Router();
 const jsonParser = express.json();
 
@@ -10,14 +10,17 @@ const jsonParser = express.json();
 const serializeJob = (job) => ({
   id: job.id,
   position: job.position,
-  pay: job.pay,
+  title: job.title,
+  type: job.type,
+  requirements: job.requirements,
   description: xss(job.description),
-  duration: job.duration,
+  member: job.member,
   location: job.location,
-  term:job.term,
-  user_id: job.user_id
+  pay: job.pay,
+  duration: job.duration,
+  unit: job.unit,
+  user_id: job.user_id,
 });
-
 
 jobsRouter
   .route("/")
@@ -29,34 +32,42 @@ jobsRouter
       })
       .catch(next);
   })
- 
+
   .post(jsonParser, (req, res, next) => {
     const knexInstance = req.app.get("db");
     const {
       position,
-      pay,
+      title,
+      type,
+      requirements,
       description,
-      duration,
+      member,
       location,
-      term,
+      pay,
+      duration,
+      unit,
       user_id
-    } = req.body
+    } = req.body;
     const newJob = {
       position,
-      pay,
+      title,
+      type,
+      requirements,
       description,
-      duration,
+      member,
       location,
-      term,
+      pay,
+      duration,
+      unit,
       user_id
     };
-  
+
     //each value in new job is required, verify that they were sent
     for (const [key, value] of Object.entries(newJob)) {
       if (value == null) {
         return res.status(400).json({
-          error: { message: `Missing '${key}' in request body` }
-        })
+          error: { message: `Missing '${key}' in request body` },
+        });
       }
     }
 
@@ -70,43 +81,38 @@ jobsRouter
       .catch(next);
   });
 
-jobsRouter
-.route("/gigs/:id")
-.get((req, res) => {
+jobsRouter.route("/gigs/:id").get((req, res) => {
   const knexInstance = req.app.get("db");
   const user_id = req.params.id;
-  
+
   JobsService.getGigs(knexInstance, user_id)
-  .then(gigs => {
-    if (!gigs) {
-      return res.status(404).json({
-        error: { message: `Gigs don't exist` },
-      });
-    }
-    res.json(gigs.rows)
-  })
-  .catch(error=>console.log(error));
-})
+    .then((gigs) => {
+      if (!gigs) {
+        return res.status(404).json({
+          error: { message: `Gigs don't exist` },
+        });
+      }
+      res.json(gigs.rows);
+    })
+    .catch((error) => console.log(error));
+});
 
+//get jobs by user route
+jobsRouter.route("/byuser/:id").get((req, res, next) => {
+  const knexInstance = req.app.get("db");
+  const empId = req.params.id;
 
-  //get jobs by user route
-  jobsRouter
-  .route("/byuser/:id")
-  .get((req, res, next) => {
-    const knexInstance = req.app.get("db");
-    const empId = req.params.id;
-
-    JobsService.getJobsByUser(knexInstance, empId)
-      .then((jobs) => {
-        if (!jobs) {
-          return res.status(404).json({
-            error: { message: `Jobs doesn't exist` },
-          });
-        }
-        res.json(jobs) 
-      })
-      .catch(error=>console.log(error));
-  })
+  JobsService.getJobsByUser(knexInstance, empId)
+    .then((jobs) => {
+      if (!jobs) {
+        return res.status(404).json({
+          error: { message: `Jobs doesn't exist` },
+        });
+      }
+      res.json(jobs);
+    })
+    .catch((error) => console.log(error));
+});
 
 //get, update, or delete specific job
 jobsRouter
@@ -122,7 +128,7 @@ jobsRouter
             error: { message: `Job doesn't exist` },
           });
         }
-        res.job = job
+        res.job = job;
         next();
       })
       .catch(next);
@@ -140,25 +146,51 @@ jobsRouter
   })
 
   .patch(jsonParser, (req, res, next) => {
-      // res.json('Patch')
-    const knexInstance = req.app.get('db');
+    // res.json('Patch')
+    const knexInstance = req.app.get("db");
     const updateJobId = req.params.id;
-    const {  position, pay, description, duration, location, term, user_id } = req.body;
-    const updatedJob = {  position, pay, description, duration, location, term, user_id };
- //console.log(updatedJob)
+    const {
+    position,
+    title,
+    type,
+    requirements,
+    description,
+    member,
+    location,
+    pay,
+    duration,
+    unit,
+    user_id
+    } = req.body;
+    const updatedJob = {
+      position,
+      title,
+      type,
+      requirements,
+      description,
+      member,
+      location,
+      pay,
+      duration,
+      unit,
+      user_id
+    };
+    //console.log(updatedJob)
     //check that at least one field is getting updated in order to patch
-    const numberOfValues = Object.values(updatedJob).filter(Boolean).length
-    if(numberOfValues === 0){
-        return res.status(400).json({
-            error: { message: `Request body must contain either position, pay, description, duration, location, term'`}
-        });
+    const numberOfValues = Object.values(updatedJob).filter(Boolean).length;
+    if (numberOfValues === 0) {
+      return res.status(400).json({
+        error: {
+          message: `Request body must contain either position, pay, description, duration, location, term'`,
+        },
+      });
     }
 
     // updatedEvent.time_of_event = new Date();
     // console.log(updateEventId, updatedEvent)
     JobsService.updateJob(knexInstance, updateJobId, updatedJob)
-     .then((job) => res.json(job))
-     .catch(next);
+      .then((job) => res.json(job))
+      .catch(next);
   });
 
 module.exports = jobsRouter;
