@@ -23,17 +23,17 @@ VALUES
   ('Editor','New York', 64, '2 months', 'Independent film', 'full time', 5),
   ('Actor','Chicago', 75, '7 days','Commercial', 'full time', 6);
 
-INSERT INTO user_profile(name, location, about_me, education, imdb, skillset, user_id)
+INSERT INTO user_profile(name, position, location, about_me, education, imdb, skillset, user_id)
 VALUES
-  ('dunder', 'Arizona', 'Im an actor', 'School of film,','imdb stuff','Lots of skills', 1),
-  ('jason', 'Texas', 'Im an editor', 'Arts Academy,','imdb stuff','Many skills', 2),
-  ('jasmine', 'Philadelphia', 'Im a director', 'University of movies,','imdb stuff','Tons of skills', 3);
+  ('Dunder', 'Actor', 'Pheonix, AZ', 'Im an actor.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'School of film,','imdb stuff','Lots of skills', 1),
+  ('jason', 'Editor', 'Austin,TX', 'Im an editor.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Arts Academy,','imdb stuff','Many skills', 2),
+  ('jasmine', 'Production Assistant', 'Philadelphia, PA', 'Im a PA. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'University of movies,','imdb stuff','Tons of skills', 3);
 
 INSERT INTO emp_profile(company_name, phone, location, about_us, email, fax, website, user_id)
 VALUES
-  ('Orion Studios', '111-111-1111', 'California', 'Since 1903', 'info@orion.com', '444-444-4444','http://www.orion.com',4),
-  ('Bad Robot Films', '222-222-2222', 'New York', 'Produces starwars', 'info@badrobot.com', '555-555-5555', 'http://www.badrobot.com',5),
-  ('Paramount Studios', '333-333-3333', 'Chicago', 'Best in the business', 'info@paramount.com', '666-666-6666', 'http://www.paramount.com',6);
+  ('Orion Studios', '111-111-1111', 'Los Angeles,CA', 'Since 1903', 'info@orion.com', '444-444-4444','http://www.orion.com',4),
+  ('Bad Robot Films', '222-222-2222', 'New York, NY', 'Produces starwars', 'info@badrobot.com', '555-555-5555', 'http://www.badrobot.com',5),
+  ('Paramount Studios', '333-333-3333', 'Chicago, IL', 'Best in the business', 'info@paramount.com', '666-666-6666', 'http://www.paramount.com',6);
 
 INSERT INTO applied (user_id, job_id, completed)
 VALUES
