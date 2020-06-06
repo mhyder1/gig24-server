@@ -84,7 +84,7 @@ usersRouter
   .patch(jsonParser, (req, res, next) => {
     const knexInstance = req.app.get('db');
     const updateUserId = req.params.id;
-    const { fullname, username, password, employer } = req.body;
+    const { fullname, username, password,employer } = req.body;
     const updatedUser = { fullname, username, password, employer};
  console.log(updatedUser)
     //check that at least one field is getting updated in order to patch

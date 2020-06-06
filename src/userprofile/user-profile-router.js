@@ -11,8 +11,11 @@ const serializeProfile = (profile) => ({
   id: profile.id,
   name: profile.name,
   about_me: xss(profile.about_me),
+  position: profile.position,
   photo: profile.photo,
   education: xss(profile.education),
+  phone: profile.phone,
+  email: profile.email,
   location: profile.location,
   skillset:profile.skillset,
   imdb:profile.imdb,
@@ -36,10 +39,11 @@ userProfileRouter
     const {
       name,
       about_me,
+      position,
       // photo,
       education,
-      phone,
       email,
+      phone,
       location,
       imdb,
       skillset,
@@ -48,16 +52,17 @@ userProfileRouter
     const newProfile = {
       name,
       about_me,
+      position,
       // photo,
       education,
-      phone,
       email,
+      phone,
       location,
       imdb,
       skillset,
       user_id
     };
-  
+  console.log(newProfile)
     //each value in new profile is required, verify that they were sent
     for (const [key, value] of Object.entries(newProfile)) {
       if (value == null) {
@@ -130,8 +135,8 @@ userProfileRouter
       // res.json('Patch')
     const knexInstance = req.app.get('db');
     const deleteProfileId = req.params.id;
-    const { name, about_me, photo, education, duration, location, imdb, skillset, user_id } = req.body;
-    const updatedProfile = {  name, about_me, photo, education, duration, location, imdb, skillset, user_id };
+    const { name, position, about_me, photo, education,email, phone, duration, location, imdb, skillset, user_id } = req.body;
+    const updatedProfile = {  name, position, about_me, photo, education, email, phone, duration, location, imdb, skillset, user_id };
  console.log(updatedProfile)
     //check that at least one field is getting updated in order to patch
     const numberOfValues = Object.values(updatedProfile).filter(Boolean).length

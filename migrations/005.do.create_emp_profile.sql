@@ -7,7 +7,7 @@ CREATE TABLE emp_profile (
   location TEXT NOT NULL,
   about_us TEXT NOT NULL,
   email TEXT NOT NULL,
-  fax TEXT NOT NULL,
+  fax TEXT,
   website TEXT NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE SET NULL
 ); 

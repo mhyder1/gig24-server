@@ -76,22 +76,21 @@ empProfileRouter
 });
 
 empProfileRouter
-.route("/emp/:id")
+.route('/emp/:id')
 .get((req, res) => {
   const knexInstance = req.app.get("db");
   const user_id = req.params.id;
-
   EmpProfileService.getProfileByUser(knexInstance, user_id)
-    .then((profile) => {
-      if (!profile) {
-        return res.status(404).json({
-          error: { message: `Profile doesn't exist` },
-        });
-      }
-      res.json(profile)
+  .then((profile) => {
+    if (!profile) {
+      return res.status(404).json({
+        error: { message: `Profile doesn't exist` },
+      });
+    }
+    res.json(profile)
 
-    })
-    .catch((error)=> console.log(error));
+  })
+  .catch((error)=> console.log(error));
 })
 
 //get, update, or delete specific profile
@@ -119,7 +118,7 @@ empProfileRouter
 .delete((req, res, next) => {
   const knexInstance = req.app.get("db");
   const deleteProfileId = req.params.id;
-  console.log(deleteProfileId)
+  // console.log(deleteProfileId)
   EmpProfileService.deleteProfile(knexInstance, deleteProfileId)
     .then(() => res.status(204).end())
     .catch(next);
@@ -131,7 +130,7 @@ empProfileRouter
   const deleteProfileId = req.params.id;
   const { company_name, about_us, logo, email, phone, location, fax, website, user_id } = req.body;
   const updatedProfile = { company_name, about_us, logo, email, phone, location, fax, website, user_id };
-console.log(updatedProfile)
+// console.log(updatedProfile)
   //check that at least one field is getting updated in order to patch
   const numberOfValues = Object.values(updatedProfile).filter(Boolean).length
   if(numberOfValues === 0){

@@ -11,6 +11,15 @@ const JobsService = {
          .returning('*')
          .then(rows => { return rows[0] });
     },
+    getGigs(knex, user_id) {
+        return knex.raw(
+            `SELECT j.*,
+            EXISTS (select ${user_id}
+                     FROM applied a
+                     WHERE a.job_id = j.id AND a.user_id = ${user_id}) AS js_id
+            FROM jobs j;`
+        )
+    },
     getJobById(knex, jobId){
         return knex
          .select('*')

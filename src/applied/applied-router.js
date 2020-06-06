@@ -88,7 +88,7 @@ appliedRouter
           error: { message: `No applicants found` },
         });
       }
-      console.log(applicants)
+      //console.log(applicants)
       res.json(applicants.rows)
       next()
     })
