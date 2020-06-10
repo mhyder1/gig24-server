@@ -1,0 +1,88 @@
+{"message":"EventsService.getAllevents is not a function","level":"error"}
+{"message":"EventsService.getAllEvents is not a function","level":"error"}
+{"message":"Unexpected string in JSON at position 195","level":"error"}
+{"message":"EventsService.getAllEvents is not a function","level":"error"}
+{"message":"res.status(...).address is not a function","level":"error"}
+{"message":"res.status(...).address is not a function","level":"error"}
+{"message":"EventsService.insertEvent is not a function","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'event' of undefined","level":"error"}
+{"message":"Cannot read property 'event' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"serializeEvent is not defined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"UsersService.updateEvent is not a function","level":"error"}
+{"message":"eventId is not defined","level":"error"}
+{"message":"update \"events\" set \"fullname\" = $1 where \"id\" = $2 - column \"fullname\" of relation \"events\" does not exist","level":"error"}
+{"message":"app is not defined","level":"error"}
+{"message":"app is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"event is not defined","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"select * from \"attend\" - relation \"attend\" does not exist","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"insert into \"events\" (\"address\", \"author\", \"description\", \"parent_name\", \"time_of_event\", \"title\", \"type\") values ($1, $2, $3, $4, $5, $6, $7) returning * - insert or update on table \"events\" violates foreign key constraint \"events_author_fkey\"","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"AttendService.deleteEvent is not a function","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"Cannot read property 'password' of undefined","level":"error"}
+{"message":"database \"gig34\" does not exist","level":"error"}
+{"message":"database \"gig34\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = 1\n            AND users.id = 1\n            returning * - syntax error at or near \"returning\"","level":"error"}
+{"message":"knex.raw(...).returning is not a function","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = users.id\n            AND jobs.user_id = undefined\n             - column \"undefined\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.id = applied.job_id\n            AND applied.user_id = users.id\n            AND jobs.user_id = undefined\n             - column \"undefined\" does not exist","level":"error"}
+{"message":"SELECT jobs.description, users.fullname\n            FROM jobs, users, applied, emp_profile\n            WHERE jobs.user_id = 4\n            AND applied.user_id = user.id\n            AND applied.job_id = jobs.id\n             - syntax error at or near \".\"","level":"error"}
