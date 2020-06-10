@@ -16,7 +16,7 @@ const serializeProfile = (profile) => ({
     phone: profile.phone,
     location: profile.location,
     fax: profile.fax,
-    logo: profile.logo,
+    // logo: profile.logo,
     user_id: profile.user_id
   });
   
@@ -36,7 +36,7 @@ empProfileRouter
   const {
     company_name,
     about_us,
-    logo,
+    // logo,
     email,
     phone,
     location,
@@ -47,7 +47,7 @@ empProfileRouter
   const newProfile = {
     company_name,
     about_us,
-    logo,
+    // logo,
     email,
     phone,
     location,
@@ -128,8 +128,8 @@ empProfileRouter
     // res.json('Patch')
   const knexInstance = req.app.get('db');
   const deleteProfileId = req.params.id;
-  const { company_name, about_us, logo, email, phone, location, fax, website, user_id } = req.body;
-  const updatedProfile = { company_name, about_us, logo, email, phone, location, fax, website, user_id };
+  const { company_name, about_us, email, phone, location, fax, website, user_id } = req.body;
+  const updatedProfile = { company_name, about_us, email, phone, location, fax, website, user_id };
 // console.log(updatedProfile)
   //check that at least one field is getting updated in order to patch
   const numberOfValues = Object.values(updatedProfile).filter(Boolean).length
