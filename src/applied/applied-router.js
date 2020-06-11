@@ -11,7 +11,8 @@ const serializeApplied = (applied) => ({
     id: applied.id,
     job_id: applied.job_id,
     user_id: applied.user_id,
-    completed: applied.completed
+    completed: applied.completed,
+    app_date: applied.app_date
   });
 
   appliedRouter
@@ -29,13 +30,15 @@ const serializeApplied = (applied) => ({
     const {
       job_id,
       user_id,
-      completed
+      completed,
+      app_date
     } = req.body;
 
     const newApplication = {
       job_id,
       user_id,
-      completed
+      completed,
+      app_date
     };
  //each value in new application is required, verify that they were sent
  for (const [key, value] of Object.entries(newApplication)) {

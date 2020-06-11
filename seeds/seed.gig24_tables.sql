@@ -35,13 +35,13 @@ VALUES
   ('Bad Robot Films', '222-222-2222', 'New York, NY', 'Produces starwars', 'info@badrobot.com', '555-555-5555', 'http://www.badrobot.com',5),
   ('Paramount Studios', '333-333-3333', 'Chicago, IL', 'Best in the business', 'info@paramount.com', '666-666-6666', 'http://www.paramount.com',6);
 
-INSERT INTO applied (user_id, job_id, completed)
+INSERT INTO applied (user_id, job_id, completed, app_date)
 VALUES
-  (1,1,FALSE),
-  (1,2,FALSE),
-  (2,2,FALSE),
-  (2,3,FALSE),
-  (3,1,FALSE),
-  (3,3,FALSE);
+  (1,1,FALSE, '2020-05-10 13:30:00'),
+  (1,2,FALSE, '2020-06-09 08:30:00'),
+  (2,2,FALSE, '2020-06-07 14:30:00'),
+  (2,3,FALSE, '2020-06-01 16:30:00'),
+  (3,1,FALSE, '2020-05-22 18:30:00'),
+  (3,3,FALSE, '2020-05-10 20:30:00');
   
 COMMIT;

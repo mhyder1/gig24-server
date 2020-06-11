@@ -13,11 +13,18 @@ const JobsService = {
     },
     getGigs(knex, user_id) {
         return knex.raw(
-            `SELECT j.*,
-            EXISTS (select ${user_id}
-                     FROM applied a
-                     WHERE a.job_id = j.id AND a.user_id = ${user_id}) AS js_id
-            FROM jobs j;`
+            `SELECT j.*,  
+                EXISTS (select ${user_id}
+                    FROM applied a
+                    WHERE a.job_id = j.id AND a.user_id = ${user_id}) AS js_id,
+                (select a.id
+                    FROM applied a
+                    WHERE a.job_id = j.id AND a.user_id = ${user_id}) AS app_id,
+                (select a.app_date
+                    FROM applied a
+                    WHERE a.job_id = j.id AND a.user_id = ${user_id}) AS date
+            FROM jobs j;
+            `
         )
     },
     getJobById(knex, jobId){
@@ -46,17 +53,7 @@ const JobsService = {
         .from('jobs')
         .where('user_id', empId)
     },
-    getGigs(knex, user_id) {
-        return knex.raw(
-        `SELECT DISTINCT on (jobs.id) 
-            jobs.*, applied.user_id,
-           CASE WHEN applied.user_id = ${user_id} THEN TRUE  
-                ELSE FALSE END as js_id
-        FROM jobs 
-        JOIN applied on jobs.id = applied.job_id;
-            `
-        )
-    }
+    
   };
 
   module.exports = JobsService;

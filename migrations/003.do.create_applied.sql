@@ -5,5 +5,6 @@ CREATE TABLE applied (
   completed BOOLEAN DEFAULT FALSE,
   user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
   job_id INTEGER REFERENCES jobs(id) ON DELETE SET NULL,
+  app_date TIMESTAMPTZ DEFAULT now() NOT NULL, 
   UNIQUE(user_id, job_id)
 ); 

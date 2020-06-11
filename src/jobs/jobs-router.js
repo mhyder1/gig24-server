@@ -80,7 +80,8 @@ jobsRouter
       .catch(next);
   });
 
-jobsRouter.route("/gigs/:id").get((req, res) => {
+jobsRouter.route("/gigs/:id")
+.get((req, res) => {
   const knexInstance = req.app.get("db");
   const user_id = req.params.id;
 
@@ -91,6 +92,7 @@ jobsRouter.route("/gigs/:id").get((req, res) => {
           error: { message: `Gigs don't exist` },
         });
       }
+      // console.log(gigs.rows)
       res.json(gigs.rows);
     })
     .catch((error) => console.log(error));
@@ -112,24 +114,6 @@ jobsRouter.route("/byuser/:id").get((req, res, next) => {
     })
     .catch((error) => console.log(error));
 });
-
-jobsRouter
-.route("/gigs/:id")
-.get((req, res) => {
-  const knexInstance = req.app.get("db");
-  const user_id = req.params.id;
-  
-  JobsService.getGigs(knexInstance, user_id)
-  .then(gigs => {
-    if (!gigs) {
-      return res.status(404).json({
-        error: { message: `Gigs don't exist` },
-      });
-    }
-    res.json(gigs.rows)
-  })
-  .catch(error=>console.log(error));
-})
 
 //get, update, or delete specific job
 jobsRouter
