@@ -21,7 +21,7 @@ describe("Jobs Endpoints", function () {
 
   before("create users table", () => db.raw(
       `
-     DROP TABLE IF EXISTS jobs, users;
+     DROP TABLE IF EXISTS applied, jobs, users;
 
      CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,

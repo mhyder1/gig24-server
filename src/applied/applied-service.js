@@ -30,7 +30,7 @@ const AppliedService = {
     },
     getCurrentApplicants(knex, emp_id) {
         return knex.raw(
-            `SELECT jobs.description, users.fullname, jobs.position
+            `SELECT jobs.description, users.fullname, jobs.position, users.id as user_id
             FROM jobs, users, applied
             WHERE jobs.user_id = ${emp_id}
             AND applied.user_id = users.id
